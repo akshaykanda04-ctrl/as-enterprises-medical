@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - A.S ENTERPRISES</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; color: #333; }
+    .container { max-width: 580px; margin: 60px auto; padding: 32px; background: white; border-radius: 16px; box-shadow: 0 4px 18px rgba(0,0,0,0.10); }
+    h1 { text-align: center; color: #2c3e50; margin-bottom: 24px; }
+    .item { margin-bottom: 18px; display: flex; align-items: flex-start; }
+    .icon { font-size: 2rem; margin-right: 14px; }
+    .label { font-weight: 600; color: #764ba2; margin-bottom: 3px; }
+    .footer { text-align: center; margin-top: 24px; padding-top: 12px; font-size: 0.96rem; color: #888; }
+    form { margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
+    input, textarea { font-size: 1rem; border-radius: 7px; border: 2px solid #e0e0e0; padding: 12px 10px; }
+    input:focus, textarea:focus { border-color: #667eea; outline: none; }
+    button { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 13px 0; border-radius: 8px; font-size: 1.07rem; cursor: pointer; font-weight: 600; }
+    button:hover { opacity: 0.92; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <div class="item"><span class="icon">📱</span><div><div class="label">Phone</div>+91 9815866118</div></div>
+    <div class="item"><span class="icon">📧</span><div><div class="label">Email</div>asenterprises063@gmail.com</div></div>
+    <div class="item"><span class="icon">📍</span><div><div class="label">Address</div>8882/22 Street No 5 Ajit Nagar Haibowal Kalan Lidhiana Punjab India 141001</div></div>
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="footer">&copy; 2025 A.S ENTERPRISES. All rights reserved.</div>
+  </div>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      alert(`Thank you ${name}! Your message has been received. We will contact you at ${email} soon.`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
